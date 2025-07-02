@@ -49,5 +49,3 @@ curl -X POST http://localhost:8081/upload/bond \
 - Airflow accessible at `http://host.docker.internal:8080`
 - PostgreSQL running with `finance_db`
 
----
-Made with ❤️ for Finance Platform
