@@ -1,0 +1,5 @@
+id,type,coupon_rate,currency,buy_sell,discount_curve,maturity_date,term,notional,clean_price,issue_date,inflation_curve,inflation_expectation_curve,underlying_curve_index,last_reset_rate,interest_rate,TheoreticalModel,compounding,AccrualDayCountConvention,DayCountConvention,calendar,indexation
+830738411,fixedratebond,0.106000,TRY,Buy,,2026-02-11,182 days,1.000000,0.917450,2016-02-24,,,,,,,annual,Actual/364,Actual/364,,
+830738412,zerocouponbond,,TRY,Buy,IRTRY-Treasury,2020-11-11,,1.000000,0.98723,2013-11-20,,,,,,,,,,,
+830738419,inflationindexedfixedbond,0.0200000,TRY,Buy,IRTRY-Treasury,2022-10-26,182 days,1.000000,2.2848388195,2012-11-07,TR Consumer Inflation Index,TR Consumer Inflation Expectation,,,,,,,,,3
+830738414,floatingratebond,,TRY,Buy,IRTRY-Treasury,2022-04-20,182 days,1.000000,1.00338,2015-04-29,,,IRTRY-Treasury,0.113,,,,,,weekend,

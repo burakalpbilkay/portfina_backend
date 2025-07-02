@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  go-airflow-trigger:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        GO_VERSION: 1.23.2
+    container_name: go_airflow_trigger
+    ports:
+      - "8081:8081"
+    environment:
+      - DB_HOST=host.docker.internal
+      - DB_PORT=5433
+      - DB_NAME=finance_db
+      - DB_USER=airflow
+      - DB_PASS=airflow
+    volumes:
+     - ./data/incoming:/app/data/incoming
