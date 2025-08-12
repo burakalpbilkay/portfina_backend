@@ -39,6 +39,9 @@ func main() {
 
 	// Bond query
 	r.HandleFunc("/bonds", handlers.GetBondsHandler).Methods("GET")
+
+	// Authentication
+	r.HandleFunc("/login", handlers.LoginHandler).Methods("POST")
 	http.Handle("/", corsMiddleware(r))
 
 	log.Println("Go DAG Trigger API running on :8081")
