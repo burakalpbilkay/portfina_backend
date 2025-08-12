@@ -10,6 +10,8 @@ import (
 	"github.com/gorilla/mux"
 )
 
+var dagTrigger = triggerDAG
+
 func TriggerHandler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.Header().Set("Access-Control-Allow-Origin", "*")
@@ -20,7 +22,7 @@ func TriggerHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if !triggerDAG(dagID) {
+	if !dagTrigger(dagID) {
 		http.Error(w, "Failed to trigger DAG", http.StatusBadGateway)
 		return
 	}
